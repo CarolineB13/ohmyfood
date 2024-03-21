@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
+
+
+/* Design system */
+:root {
+    /* colors */
+    --background-color: #F6F6F6;
+    --primary-color: #9356dc;
+    --secondary-color: #ff79da;
+    --tertiary-color:#99e2d0;
+
+    /* Text configuration */
+    --body-font: 'roboto';
+    --title-font: 'Shrikhand';
+
+    --body-font-size: 1rem;
+    --title-font-size: 1.87rem;
+
+}
+
+.invisible {
+    visibility: hidden;
+}
+.main-container {
+   
+    background-color: var(--background-color);
+    font-size: var(--body-font-size) ;
+    font-family: var(--body-font);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+ 
+  
+
+.header {
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    filter:drop-shadow(0px 0px 4px #00000040);
+}
+
+.icon-goback {
+    margin: 17px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-title {
+    font-size: var(--title-font-size);
+    font-family: var(--title-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*****footer*****/
+
+footer {
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    
+}
+footer h1 {
+    font-size: 1.13rem;
+    font-family: var(--title-font);
+    display: flex;
+    align-items: center;
+    margin: 20px 25px;
+  
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 25px 25px;
+    gap: 7px;
+  
+}
+
+.footer-links a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footer-links i {
+    width: 22px;
+    font-size: 11px;
+}
+
+.strong-link {
+    font-weight: 500;
+}
+
