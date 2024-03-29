@@ -170,7 +170,7 @@ section {
 }
 
 
-.search button {
+.search a {
   color: white;
   font-weight: 500;
   background: linear-gradient(#9356DC, #FF79DA);
@@ -188,7 +188,7 @@ section {
   justify-content: center;
 }
   
-  .search button:hover {
+  .search a:hover {
     opacity:0.8;
     box-shadow:0px 4px 10px 0px hsla(0, 0%, 0%, 0.502);
  
@@ -274,14 +274,16 @@ ol {
 }
 
 .restaurants-cards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap:18px;
     align-items: center;
 }
 .card {
     height: 251px;
+    /****
     width: 340px;
+    */
     border-radius: 15px;
     background-color: white;
 
@@ -378,10 +380,10 @@ ol {
     padding-right: 30px;
   }
   .restaurants-cards {
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
     gap:30px;
 }
  .restaurants {
@@ -392,9 +394,7 @@ ol {
 }
 
 @media screen and (min-width: 1024px) {
-  .card {
-    width: 420px;
-  }
+
 }
 
 /****Media querries pour les écrans supérieurs à 1224px (desktop)***/
@@ -422,11 +422,7 @@ ol {
   margin-left: 0;
 }
 
-.card {
-  width: 455px;
-}
 .restaurants-cards {
-  justify-content: space-between;
   gap:50px;
 }
 }
@@ -436,7 +432,5 @@ ol {
     padding-left: 200px;
     padding-right: 200px;
   }
-  .card {
-    width: 490px;
-  }
+
 }

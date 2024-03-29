@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OhMyFood</title>
     <link rel="shortcut icon" href="https://svgsilh.com/svg_v2/305499.svg" />
-    <link rel="stylesheet" href="./assets/styles/index.css" />
-    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
     <link rel="stylesheet" href="./assets/styles/reset.css" />
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -16,7 +15,7 @@
     referrerpolicy="no-referrer"/>
    
   </head>
-  <body class="main-container">
+  <body> <div class="main-container">
 
     <!-- loader -->
     <div class="loader"> 
@@ -33,7 +32,7 @@
   
 <header>
     <div class="header">
-      <a href="index.html" class="icon-goback invisible" ><i class="fa-solid fa-arrow-left"></i>
+      <a href="index.html" class="header__icon-goback header__icon-goback--invisible" ><i class="fa-solid fa-arrow-left"></i>
       </a>
       <div class="logo-title"> <h1>ohmyfood</h1>
       </div>
@@ -46,7 +45,7 @@
     <section class="search">
       <h2>Réservez le menu qui vous convient</h2>
       <p>Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
-      <button><a href="#restaurants">Explorer nos restaurants</a></button>
+      <a href="#restaurants">Explorer nos restaurants</a>
       
       </section>
     <section class="fonctionnement">
@@ -72,7 +71,7 @@
       </li>
     </ol>
     </section>
-    <section id="restaurants" class="restaurants">
+    <section id="restaurants" >
       <h2>Restaurants</h2>
       <div class="restaurants-cards">
         <a href="restaurants/la_palette_du_gout.html"> 
@@ -162,6 +161,7 @@
       </a>
     </div>
     </footer>
+  </div>
   </div>
   </body>
 </html>
