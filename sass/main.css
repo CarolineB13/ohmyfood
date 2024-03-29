@@ -420,16 +420,10 @@
   width: 186px;
   display: flex;
   justify-content: space-around;
-  cursor: pointer;
-  opacity: 1;
 }
 .main-container .page .menu .button:hover {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5019607843);
   opacity: 0.8;
-}
-.main-container .page .menu .button:hover {
-  opacity: 0.8;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5019607843);
 }
 .main-container .page .menu-section {
   display: flex;
@@ -596,20 +590,16 @@
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5019607843);
   opacity: 0.8;
 }
-.main-container .index-page .search a:hover {
-  opacity: 0.8;
-  box-shadow: 0px 4px 10px 0px hsla(0, 0%, 0%, 0.502);
-}
-.main-container .index-page .fonctionnement {
+.main-container .fonctionnement {
   display: flex;
   flex-direction: column;
 }
-.main-container .index-page .fonctionnement h2 {
+.main-container .fonctionnement h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 24px;
 }
-.main-container .index-page .fonctionnement ol {
+.main-container .fonctionnement ol {
   list-style: none;
   display: flex;
   gap: 25px;
@@ -617,18 +607,18 @@
   align-items: center;
 }
 @media screen and (min-width: 1224px) {
-  .main-container .index-page .fonctionnement ol {
+  .main-container .fonctionnement ol {
     flex-direction: row;
     align-items: center;
     display: flex;
     justify-content: space-between;
   }
 }
-.main-container .index-page .fonctionnement li {
+.main-container .fonctionnement li {
   display: flex;
   align-items: center;
 }
-.main-container .index-page .fonctionnement li .number-list {
+.main-container .fonctionnement li .number-list {
   font-size: 14px;
   color: white;
   border-radius: 25px;
@@ -643,7 +633,7 @@
   left: 12px;
   margin-left: -12px;
 }
-.main-container .index-page .fonctionnement li .bouton-fonctionnement {
+.main-container .fonctionnement li .bouton-fonctionnement {
   width: 322px;
   height: 72px;
   border: none;
@@ -653,53 +643,53 @@
   display: flex;
   align-items: center;
 }
-.main-container .index-page .fonctionnement li .bouton-fonctionnement i {
+.main-container .fonctionnement li .bouton-fonctionnement i {
   margin-left: 35px;
   color: #7E7E7E;
 }
-.main-container .index-page .fonctionnement li .bouton-fonctionnement p {
+.main-container .fonctionnement li .bouton-fonctionnement p {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   margin-left: 23px;
 }
-.main-container .index-page #restaurants {
+.main-container #restaurants {
   padding-bottom: 66px;
   padding-top: 50px;
   background-color: #F6F6F6;
 }
 @media screen and (min-width: 768px) {
-  .main-container .index-page #restaurants {
+  .main-container #restaurants {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 }
 @media screen and (min-width: 1224px) {
-  .main-container .index-page #restaurants {
+  .main-container #restaurants {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 }
-.main-container .index-page #restaurants h2 {
+.main-container #restaurants h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 24px;
 }
 @media screen and (min-width: 1224px) {
-  .main-container .index-page #restaurants h2 {
+  .main-container #restaurants h2 {
     margin-left: 0;
   }
 }
-.main-container .index-page #restaurants .restaurants-cards {
+.main-container #restaurants .restaurants-cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .main-container .index-page #restaurants .restaurants-cards {
+  .main-container #restaurants .restaurants-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -708,22 +698,22 @@
   }
 }
 @media screen and (min-width: 1224px) {
-  .main-container .index-page #restaurants .restaurants-cards {
+  .main-container #restaurants .restaurants-cards {
     gap: 50px;
   }
 }
-.main-container .index-page #restaurants .restaurants-cards .card {
+.main-container #restaurants .restaurants-cards .card {
   height: 251px;
   border-radius: 15px;
   background-color: white;
 }
-.main-container .index-page #restaurants .restaurants-cards .card .image {
+.main-container #restaurants .restaurants-cards .card .image {
   overflow: hidden;
   height: 231px;
   border-radius: 15px;
   position: relative;
 }
-.main-container .index-page #restaurants .restaurants-cards .card .image img {
+.main-container #restaurants .restaurants-cards .card .image img {
   height: 231px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -731,7 +721,7 @@
   position: relative;
   bottom: 57px;
 }
-.main-container .index-page #restaurants .restaurants-cards .card .image .badge-new {
+.main-container #restaurants .restaurants-cards .card .image .badge-new {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -749,17 +739,17 @@
   justify-content: space-around;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
-.main-container .index-page #restaurants .restaurants-cards .card .image .invisible {
+.main-container #restaurants .restaurants-cards .card .image .invisible {
   visibility: hidden;
 }
-.main-container .index-page #restaurants .restaurants-cards .card .card-content {
+.main-container #restaurants .restaurants-cards .card .card-content {
   margin-left: 14px;
   display: grid;
   margin-top: -57px;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 38px 38px;
 }
-.main-container .index-page #restaurants .restaurants-cards .card .card-content .like {
+.main-container #restaurants .restaurants-cards .card .card-content .like {
   display: flex;
   padding-right: 25px;
   font-size: 22px;
@@ -768,7 +758,7 @@
   grid-row: 1/3;
   grid-column: 2/3;
 }
-.main-container .index-page #restaurants .restaurants-cards .card .card-content .like .plein {
+.main-container #restaurants .restaurants-cards .card .card-content .like .plein {
   opacity: 0;
   position: absolute;
   background-image: linear-gradient(#9356dc, #ff79da);
@@ -777,17 +767,17 @@
   color: transparent;
   transition: opacity 300ms ease-in-out;
 }
-.main-container .index-page #restaurants .restaurants-cards .card .card-content .like .plein:hover {
+.main-container #restaurants .restaurants-cards .card .card-content .like .plein:hover {
   opacity: 1;
 }
-.main-container .index-page #restaurants .restaurants-cards .card .card-content h3 {
+.main-container #restaurants .restaurants-cards .card .card-content h3 {
   font-size: 1.13rem;
   font-weight: 700;
   line-height: 21px;
   display: flex;
   align-items: center;
 }
-.main-container .index-page #restaurants .restaurants-cards .card .card-content p {
+.main-container #restaurants .restaurants-cards .card .card-content p {
   font-size: 17px;
   font-weight: 300;
   line-height: 20px;

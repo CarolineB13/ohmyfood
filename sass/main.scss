@@ -485,19 +485,13 @@
       .button {
         @include bouton-gradient;
         width: 186px;
-       
         display: flex;
         justify-content: space-around;
-        cursor: pointer;
-        opacity: 1;
+       
      
       }
       
-        .button:hover {
-        opacity:0.8;
-        box-shadow:0px 4px 10px 0px #00000080;
-     
-      }}
+        }
     .menu-section {
         display: flex;
         flex-direction: column;
@@ -659,9 +653,7 @@ section {
             display: flex;
             align-items: center;
             justify-content: center;
-            &:hover {
-                opacity:0.8;
-                box-shadow:0px 4px 10px 0px hsla(0, 0%, 0%, 0.502);
+
              
               }
         }
@@ -849,5 +841,4 @@ section {
     } 
     
     
-}
 }
