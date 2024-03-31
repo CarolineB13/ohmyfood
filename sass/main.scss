@@ -14,8 +14,7 @@
     $body-font-size: 1rem;
     $title-font-size: 1.87rem;
 
-
-
+    $num-menu-section: 3;
 
 
 @mixin title {
@@ -305,7 +304,32 @@
 
     }
     .menu {
-            width: 100%;
+      .name-restaurant {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        position: relative;
+        width: 340px;
+        h2 {
+            font-family: $title-font-family;
+            font-size: 28px;
+        }
+        .like {
+            display: flex;
+            font-size: 22px;
+            justify-content: center;
+            align-items: center;
+            i {
+                position: absolute;
+                
+          }
+          .plein {
+            @include coeur-plein;
+             }
+    }
+
+     
+  }
+          width: 100%;
           padding: 32px 13px 40px 13px;
           border-radius: 40px 40px 0px 0px;
           margin-top: -55px;
@@ -324,36 +348,36 @@
             @media screen and (min-width: 1224px) {
                 width: 1055px;
                     }
-        .name-restaurant {
-            display: grid;
-            grid-template-columns: 4fr 1fr;
-            position: relative;
-            width: 340px;
-            h2 {
-                font-family: $title-font-family;
-                font-size: 28px;
-            }
-            .like {
-                display: flex;
-                font-size: 22px;
-                justify-content: center;
-                align-items: center;
-                i {
-                    position: absolute;
-                    
-              }
-              .plein {
-                @include coeur-plein;
-                 }
+       
+      &__section {
+        @keyframes menu-section {
+          0% {
+              transform: translateX(-1000px);
+              opacity:0;
+          }
+      
+        50% {
+          opacity:0.5;
         }
-         
+          100% {
+            transform: translateX(0);
+            opacity:1;
+          }
       }
-      .menu-section {
         display: flex;
         flex-direction: column;
         width: 349px;
         gap: 12px;
         animation: menu-section 900ms ease-in-out;
+
+          @for $i from 1 through $num-menu-section  {
+            &--#{$i} {
+          animation-delay: 300ms* $i;
+          animation-fill-mode: both;
+            }
+        }
+        
+
         @media screen and (min-width: 768px) {
             width: 500px;
         }
@@ -433,6 +457,7 @@
                     
                     }
           }
+        
         .select-button {
             display: flex;
             justify-content: center;
@@ -453,145 +478,25 @@
 
    
    }
-}
-.menu-section--1 {
-    animation-delay: 300ms;
-    animation-fill-mode: both;
   }
-  
-  .menu-section--2 {
-    animation-delay: 600ms;
-    animation-fill-mode: both;
-  }
-  .menu-section--3 {
-    animation-delay: 900ms;
-    animation-fill-mode: both;
-  }
+   .commander {
+    display: flex;
+    justify-content: center;
 
-  @keyframes menu-section {
-    0% {
-        transform: translateX(-1000px);
-        opacity:0;
-    }
-
-  50% {
-    opacity:0.5;
-  }
-    100% {
-      transform: translateX(0);
-      opacity:1;
-    }
-}
-      .button {
-        @include bouton-gradient;
-        width: 186px;
-        display: flex;
-        justify-content: space-around;
-       
-     
-      }
-      
-        }
-    .menu-section {
-        display: flex;
-        flex-direction: column;
-        width: 349px;
-        gap: 12px;
-        animation: menu-section 900ms ease-in-out;
-
-        h3 {
-            text-transform: uppercase;
-            font-weight: 300;
-            height: 27px;
-            width: 40px;
-            border-bottom: solid 3px $tertiary-color;
-           
-        }
-        article {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-
-            .plate-and-price {
-                height: 69px;
-                border-radius: 15px;
-                padding: 10px;
-                box-shadow: 0px 4px 15px 0px #0000001A;
-                position: relative;
-                cursor: pointer;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                transition: padding-right 300ms ease-in-out;
-              &:hover {
-                
-                padding-right: 69px;
-                .select-button {
-                    opacity: 1;
-                    transform: translate(-59px);
-              }
-
-              i {
-                color:$tertiary-color;
-                background-color: white;
-                border-radius: 25px;
-                height: 20px;
-                width: 20px;
-                font-size: 12px;
-                text-align: center;
-                padding-top: 5px;
-            
-            }
-        }
-
-          h4 {
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 21px;
-           
-        }
-        .second-line {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            p {
-                margin: 0;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                line-height: 18px;
-                font-size: 15px;
-                font-weight: 300;
-                }
-                span {
-                    font-size: 15px;
-                    font-weight: 700;
-                    line-height: 18px;
-                    
-                    }
-          }
-        .select-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: $tertiary-color;
-            width: 59px;
-            height: 69px;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            position: absolute;
-            padding: 20px;
-            right: -59px;
-            top: 0;
-            opacity: 0;
-            transition: transform 50ms ease-in-out, opacity 50ms 0ms ease-in-out;
-          }
-    }
-
+.button {
  
-   }
+    width: 186px;
+   @include bouton-gradient;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+  }
 }
-}
+      }
+    }
+  
+
 .index-page {
     z-index:1;
     animation: index-page 500ms 3s both;
@@ -657,7 +562,6 @@ section {
              
               }
         }
-    }
     
     .fonctionnement {
             display: flex;
@@ -838,7 +742,6 @@ section {
             }
         }
     }
-    } 
-    
-    
-}
+    }    
+  }
+    }
